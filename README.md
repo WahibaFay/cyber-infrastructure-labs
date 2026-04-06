@@ -48,14 +48,13 @@ Concevoir et configurer un réseau d'entreprise segmenté en VLANs pour 3 bureau
 ### Fichiers
 ```
 01-packet-tracer/
-├── minilab.pkt          # Fichier Packet Tracer
-├── images/
-│   └── schema-reseau.png  # Schéma de la topologie
-└── configs/
-    ├── switch1.txt      # show running-config Switch1
-    ├── switch2.txt      # show running-config Switch2
-    ├── switch3.txt      # show running-config Switch3
-    └── router1.txt      # show running-config Router1
+├── configs/
+│   ├── router1.txt
+│   ├── switch1.txt
+│   ├── switch2.txt
+│   └── switch3.txt
+└── images/
+    └── schema-reseau.png
 ```
 
 ### Résultats
