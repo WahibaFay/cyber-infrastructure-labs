@@ -53,8 +53,10 @@ Concevoir et configurer un réseau d'entreprise segmenté en VLANs pour 3 bureau
 │   ├── switch1.txt
 │   ├── switch2.txt
 │   └── switch3.txt
-└── images/
-    └── schema-reseau.png
+├── images/
+│   └── schema-reseau.png
+├── minilab.pkt
+└── README.md
 ```
 
 ### Résultats
