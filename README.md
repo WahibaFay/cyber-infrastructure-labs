@@ -13,7 +13,7 @@
 | # | Exercice | Technologies | Statut |
 |---|----------|-------------|--------|
 | 01 | [Réseau multi-VLAN](#-exercice-01--réseau-multi-vlan-cisco-packet-tracer) | Cisco Packet Tracer, IOS CLI | ✅ Terminé |
-| 02 | [Active Directory](#-exercice-02--active-directory) | Windows Server, PowerShell | 🔄 En cours |
+| 02 | [Active Directory](#-exercice-02--active-directory) | Windows Server, PowerShell | ✅ Terminé |
 | 03 | [Docker WordPress](#-exercice-03--docker--wordpress) | Docker, Nginx, MariaDB, PHP | 🔄 En cours |
 
 ---
@@ -66,7 +66,28 @@ Concevoir et configurer un réseau d'entreprise segmenté en VLANs pour 3 bureau
 - ✅ Ping 0% perte entre tous les équipements
 
 ---
+## 🪟 Exercice 02 : Active Directory
 
+### Objectif
+Déployer un Active Directory sur Windows Server via PowerShell, créer le domaine `laplateforme.io` et peupler l'annuaire depuis un fichier CSV.
+
+### Spécifications
+- **Domaine** : laplateforme.io
+- **Utilisateurs** : 17 comptes créés depuis CSV
+- **Mot de passe initial** : `Azerty_2025!` (changement forcé à la 1ère connexion)
+
+### Fichiers
+
+```
+├── 02-active-directory/
+│   ├── scripts/
+│   │   ├── create-domain.ps1   # Création du domaine AD
+│   │   └── import-users.ps1    # Import utilisateurs depuis CSV
+│   └── data/
+│       └── users.csv           # Fichier source des utilisateurs
+
+
+```
 
 ---
 
@@ -77,16 +98,17 @@ Concevoir et configurer un réseau d'entreprise segmenté en VLANs pour 3 bureau
 2. Ouvrir `01-packet-tracer/minilab.pkt`
 3. Les configurations sont dans `01-packet-tracer/configs/`
 
-
+#### Exercice 02 — Active Directory
+1. Déployer une VM Windows Server 2022
+2. Exécuter `02-active-directory/scripts/create-domain.ps1`
+3. Exécuter `02-active-directory/scripts/import-users.ps1`
+4. Le fichier CSV source est dans `02-active-directory/data/users.csv`
 
 ## 📁 Structure complète du repo
 
 ```
 cyber-infrastructure-labs/
-├── README.md
-├── LICENSE
 ├── 01-packet-tracer/
-│   ├── README.md
 │   ├── minilab.pkt
 │   ├── images/
 │   │   └── schema-reseau.png
@@ -96,7 +118,14 @@ cyber-infrastructure-labs/
 │       ├── switch3.txt
 │       └── router1.txt
 ├── 02-active-directory/
-└── 03-docker/
+│   ├── scripts/
+│   │   ├── create-domain.ps1
+│   │   └── import-users.ps1
+│   └── data/
+│       └── users.csv
+├── 03-docker/
+├── LICENSE
+└── README.md
     
 
 ---
